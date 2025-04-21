@@ -4,96 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spend Track</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./static/css/index_style.css">
 </head>
 <body>
     <div class="mainbar">
-        <div class="sbacn">
-            <div id="sbacn-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div id="companyname">
-                SpendTrack
-            </div>
+        <div id="companyname">
+            <a href="./index.html"><img src="./static/images/logo.jpg" alt="Logo" height="40px"></a>
         </div>
+        
         <div class="las">
-            <button id="login">Login</button>
-            <button id="singup">Sign up</button>
+            <a href="./subpages/login_page.html">Login</a>
+            <a href="./subpages/signup_page.html">Sign up</a>
         </div>
     </div>
 
     <div class="main">
-        <div class="sidebar">
-            <button onclick="dashBoard()" class="active">Dashboard</button>
-            <button onclick="transactions()">Transactions</button>
-            <button onclick="categories()">Categories</button>
-            <button onclick="reports()">Reports</button>
-            <button onclick="accounts()">Accounts</button>
-            <button onclick="settings()">Settings</button>
-            <button onclick="help()">Help</button>
-            <button onclick="logout()">Logout</button>
-            
-        </div>
-        <div class="maincontent">
-            <div class="dash" id="graph-container">
-                <h2>Monthly Spending</h2>
-                <div class="xval-graph">
-                    <div class="xval">
-                        <h6>$1000</h6>
-                        <h6>$900</h6>
-                        <h6>$800</h6>
-                        <h6>$700</h6>
-                        <h6>$600</h6>
-                        <h6>$500</h6>
-                        <h6>$400</h6>
-                        <h6>$300</h6>
-                        <h6>$200</h6>
-                        <h6>$100</h6>
-                        <h6>0</h6>
-                    </div>
-                </div>
-                <div class="yval">
-                    <h6>Jan 25</h6>
-                    <h6>Feb 25</h6>
-                    <h6>Mar 25</h6>
-                    <h6>Apr 25</h6>
-                    <h6>May 25</h6>
-                    <h6>Jun 25</h6>
-                    <h6>Jul 25</h6>
-                    <h6>Aug25</h6>
-                    <h6>Sep 25</h6>
-                    <h6>Oct 25</h6>
-                    <h6>Nov 25</h6>
-                    <h6>Dec 25</h6>
-                </div>
-                <div class="gra"></div>
-            </div>
-            <div class="dash" id="balance">
-                <h2>Total Balance</h2>
-                <p>$1,250.75</p>
-            </div>
-            <div class="dash" id="transactions">
-                <h2>Recent Transactions</h2>
-                <ul>
-                    <li>04/19/2025: Groceries -$50</li>
-                    <li>04/18/2025: Salary +$2,000</li>
-                    <li>04/17/2025: Rent -$800</li>
-                </ul>
-            </div>
-            <div class="dash" id="budget">
-                <h2>Budget Status</h2>
-                <p>Food: <progress value="75" max="100"></progress>$150/$200</p>
-                
-            </div>
-            <div class="dash" id="category">
-                <h2>Spending by Category</h2>
-                <canvas id="spendingChart"></canvas>
-            </div>
-            
-        </div>
+        <h1>Track Your Spend,<br> Master Your Money!</h1>
+        <h6>All the rights reserved to Spend Track @ 2025 &nbsp;&nbsp; 
+            <a href="www.facebook.com">
+                <img src="./static/images/facebook.png" alt="Faacebook Logo" height="15px">
+            </a>
+                &nbsp;&nbsp; 
+            <a href="www.instagram.com">
+                <img src="./static/images/instagram.png" alt="Instagram Logo" height="15px">
+            </a>
+    </h6>
+
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="../static/js/script.js"></script> -->
 </body>
 </html>

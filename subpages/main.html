@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spend Track</title>
+    <link rel="stylesheet" href="../static/css/main_style.css">
+</head>
+<body>
+    <div class="mainbar">
+        <div class="sbacn">
+            <div id="sbacn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="companyname">
+                SpendTrack
+            </div>
+        </div>
+        <div class="account">
+            <img src="../static/images/user.png" alt="" height="30px">
+        </div>
+        <!-- <div class="profile">
+            
+        </div> -->
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <button onclick="dashBoard()" class="active">Dashboard</button>
+            <button onclick="transactions()">Transactions</button>
+            <button onclick="categories()">Categories</button>
+            <button onclick="reports()">Reports</button>
+            <button onclick="accounts()">Accounts</button>
+            <button onclick="settings()">Settings</button>
+            <button onclick="help()">Help</button>
+        </div>
+        <div class="maincontent">
+            <div class="dash" id="graph-container">
+                <h2>Monthly Spending (2025)</h2>
+                <canvas id="myChart" height="200px"></canvas>
+            </div>
+            <div class="dash" id="balance">
+                <h2>Total Balance: <small>$1,250.75</small></h2>
+                
+            </div>
+            <div class="dash" id="savings">
+                <h2>Saving Status</h2><br>
+                <p>Goal: $5000 &nbsp;&nbsp;&nbsp;&nbsp;Acheived: $1879&nbsp;&nbsp;&nbsp;&nbsp; Progress: <progress value="37" max="100"></progress></p>
+                
+            </div>
+            <div class="dash" id="transactions">
+                <h2>Recent Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Groceries</td>
+                            <td>Weekly grocery shopping</td>
+                            <td class="expense">-$50</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Salary</td>
+                            <td>Monthly salary deposit</td>
+                            <td class="deposit">+$2,000</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Rent</td>
+                            <td>Monthly apartment rent</td>
+                            <td class="expense">-$800</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Utilities</td>
+                            <td>Electricity bill payment</td>
+                            <td class="expense">-$150</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Investment</td>
+                            <td>Stock market investment</td>
+                            <td class="deposit">+$1,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="../static/js/main_script.js"></script>
+</body>
+</html>

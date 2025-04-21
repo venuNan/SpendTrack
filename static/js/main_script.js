@@ -1,13 +1,29 @@
 var sideBarTrue = true;
 // const sidebarList = [true, false, false, false, false, false, false, false]
 
-function dashBoard(){
-    
-};
+function clear_content() {
+    // Hide all sections
+    document.querySelector('.dashboard').style.display = 'none';
+    document.querySelector('.transactions').style.display = 'none';
+    document.querySelector('.categories').style.display = 'none';
+    document.querySelector('.reports').style.display = 'none';
+    document.querySelector('.accounts').style.display = 'none';
+    document.querySelector('.settings').style.display = 'none';
+    document.querySelector('.help').style.display = 'none';
+}
 
-function transactions(){
+// Function to show the Dashboard section
+function dashBoard() {
+    clear_content();
+    document.querySelector('.dashboard').style.display = 'block';
+}
 
-    
+// Function to show the Transactions section
+function transactions() {
+    clear_content();
+    document.querySelector('.transactions').style.display = 'block';
+
+    console.log("works");
 
     // Array of possible categories
     const categories = [
@@ -21,7 +37,7 @@ function transactions(){
         for (let i = 1; i <= count; i++) {
             const category = categories[Math.floor(Math.random() * categories.length)];
             const description = `${category} payment`;
-            const amount = Math.random() > 0.5 // Randomly decide if it's a deposit or expense
+            const amount = Math.random() > 0.5
                 ? Math.floor(Math.random() * 5000) + 100 // Deposit: $100 to $5000
                 : -Math.floor(Math.random() * 5000) - 50; // Expense: -$50 to -$5000
 
@@ -37,7 +53,7 @@ function transactions(){
 
     // Function to render transactions into the table
     function renderTransactions(transactions) {
-        const tbody = document.querySelector('#transactions tbody');
+        const tbody = document.querySelector('.transactions tbody');
         tbody.innerHTML = ''; // Clear existing rows
 
         transactions.forEach((txn) => {
@@ -60,34 +76,39 @@ function transactions(){
     }
 
     // Generate 150 random transactions and render them
-    const transactions = generateRandomTransactions(150);
-    renderTransactions(transactions);
-};
-
-function categories(){
-
-};
-
-function reports(){
-
-};
-
-function accounts(){
-
-};
-
-function settings(){
-    
+    const transactionsData = generateRandomTransactions(150);
+    renderTransactions(transactionsData);
 }
 
-function help(){
-
+// Function to show the Categories section
+function categories() {
+    clear_content();
+    document.querySelector('.categories').style.display = 'block';
 }
 
-function logout(){
-
+// Function to show the Reports section
+function reports() {
+    clear_content();
+    document.querySelector('.reports').style.display = 'block';
 }
 
+// Function to show the Accounts section
+function accounts() {
+    clear_content();
+    document.querySelector('.accounts').style.display = 'block';
+}
+
+// Function to show the Settings section
+function settings() {
+    clear_content();
+    document.querySelector('.settings').style.display = 'block';
+}
+
+// Function to show the Help section
+function help() {
+    clear_content();
+    document.querySelector('.help').style.display = 'block';
+}
 
 document.getElementById("sbacn-menu").addEventListener("click", ()=>{
     var sidebar = document.getElementsByClassName("sidebar")[0];
@@ -189,3 +210,5 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const chart = new Chart(ctx, config);
 
 console.log(document.getElementById('myChart'));
+
+dashBoard()

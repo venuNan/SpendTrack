@@ -63,6 +63,12 @@ body, html {
     color: white;
     font-weight: bold;
     font-size: 20px;
+
+}
+
+.mainbar .sbacn #companyname a{
+    position: relative;
+    top:4px
 }
 
 .main{
@@ -73,14 +79,20 @@ body, html {
 
 
 
-.main .maincontent{
+.main .dashboard{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     scrollbar-width: none;
     padding: 10px;
     width: 100%;
-    gap:20px;
+}
+
+.main .dashboard .dash {
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid rgb(51, 48, 48);
+    margin-bottom: 15px; /* Adds spacing below each .dash element */
 }
 
 .main .sidebar{
@@ -117,17 +129,17 @@ body, html {
     background-color: rgb(21, 17, 17);
 }
 
-.main .maincontent .dash {
+.main .dashboard .dash {
     padding: 15px;
     border-radius: 20px;
     border:1px solid rgb(51, 48, 48);
 }
 
-.main .maincontent #graph-container h2{
+.main .dashboard #graph-container h2{
     margin-bottom: 15px;
 }
 
-.main .maincontent #graph-container #myChart{
+.main .dashboard #graph-container #myChart{
     width: 100%;
 }
 
@@ -145,7 +157,10 @@ body, html {
     margin-top: 10px;
     border-radius: 10px;
     overflow: hidden;
+    
 }
+
+
 
 #transactions th,
 #transactions td {
@@ -174,3 +189,11 @@ body, html {
 #transactions .expense {
     color: red;
 }
+
+.transactions{
+    padding: 20px;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
